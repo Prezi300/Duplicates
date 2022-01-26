@@ -1,3 +1,3 @@
 # Duplicates
 
-This scans lines in files and removes duplicates.
+This scans lines in files and removes duplicate lines.
