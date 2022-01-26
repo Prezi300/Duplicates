@@ -1,0 +1,40 @@
+def options():
+    files = []
+    draco = []
+
+    # SPECIFY HOW MANY FILES YOU WANT TO SCAN
+    file_count = int(input("How many files do you wanna scan?: "))
+
+    # WILL PROMPT USER PER NUMBER OF FILES AND PUTS THEM IN A LIST
+    for i in range(0, file_count):
+        file_name = input("Whats the file's name? ")
+        draco.append(file_name)
+
+    #first_file = input("Enter file to compare: ")
+    #second_file = input("Enter file to compare: ")
+    for file in draco:
+        # IF LIST ELEMENT IS EMPTY IT WILL SKIP THAT ITERATION
+        if file == '':
+            continue
+        try:
+            with open(f"{file}.txt", 'r') as f:
+                a = f.readlines()
+            for i in a:
+                files.append(i.strip())
+        except:
+            print(f"{file}.txt NOT FOUND!!!")
+            continue
+
+    print(remove_duplicates(files))
+
+def remove_duplicates(z=(), v=()):
+    final_list = []
+    print(z)
+    for i in z:
+        if i in final_list:
+            continue
+        else:
+            final_list.append(i)
+    return final_list
+
+options()
