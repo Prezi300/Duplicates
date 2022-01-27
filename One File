@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/python3
 
 def duplicates_in_file():
     a = []
