@@ -1,3 +1,5 @@
+#!/bin/python3
+
 def duplicates_in_file():
     a = []
     final_list = []
