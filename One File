@@ -5,9 +5,7 @@ def duplicates_in_file():
     final_list = []
     file = input("Whats the file's name? ")
     with open(f"{file}.txt", 'r') as f:
-        fil = f.readlines()
-
-    for i in fil:
+    for i in f.readlines():
         a.append(i.strip())
 
     for i in a:
